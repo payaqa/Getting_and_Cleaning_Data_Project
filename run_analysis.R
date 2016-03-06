@@ -82,5 +82,5 @@ dataMelt <- melt(finalData,id=IDColumns,meaure.vars=dataColumns)
 tidyData <- dcast(dataMelt, SubjectID+ActivityLabel ~ variable,mean)
  
 ### write out the tidyData to a file
-write.table(tidyData, file = "./data/UCI HAR Dataset/TidyData.txt")
+write.table(tidyData, file = "./data/UCI HAR Dataset/TidyData.txt", row.name=FALSE)
 
